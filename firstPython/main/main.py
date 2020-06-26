@@ -1,0 +1,41 @@
+from askInput import *
+from manageFiles import *
+
+#testing functions defined in personal scripts
+#change the False condition to activate a specific section
+
+if False :
+    #testing file functions
+    content = readFileContent('inputs/data.txt')
+    writeFile('outputs/created.txt', content)
+    appendFileContent('outputs/created.txt', 'New line appended')
+    deleteFile('fileToDelete.txt')
+
+if False :
+    #reading string lines
+    for line in content.splitlines():
+        print 'line:', line
+
+if False :
+    #testing user interaction functions
+    floatNumber = askForFloat('enter a decimal:')
+    print 'I received ', floatNumber
+    
+    intNumber = askForInt('enter an integer:')
+    print 'I received ', intNumber
+    
+    stringInput = askForString('enter your name:')
+    print 'I received ', stringInput
+
+if False:
+    #testing loops
+    execfile('loops.py')
+    
+if False:
+    #testing lists
+    execfile('lists.py')
+    
+if False:
+    #testing arguments
+    #IMPORTANT: do NOT import the script if you use os.system to execute it
+    os.system('python manageArguments.py 7 5')
