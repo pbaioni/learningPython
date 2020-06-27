@@ -59,4 +59,8 @@ if False:
 if False:
     #testing file search
     searchFiles.searchFiles('/Users/paolobaioni/Documents/Music/Italiana/883/', '*.mp3')
+    
+if False:
+    #testing email sending
+    import sendEmail
 
