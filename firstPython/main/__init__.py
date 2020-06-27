@@ -1,5 +1,6 @@
 from askInput import *
-from manageFiles import *
+from manageFiles import readFileContent, writeFile, appendFileContent, deleteFile
+import os
 
 #testing functions defined in personal scripts
 #change the False condition to activate a specific section
@@ -49,3 +50,7 @@ if False:
 if False:
     #testing colors
     import manageColors
+    
+if False:
+    #testing colors
+    import manageDates
