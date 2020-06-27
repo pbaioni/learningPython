@@ -46,6 +46,6 @@ if False:
     #this executes the passVariables script
     import passVariables
     
-if True:
+if False:
     #testing colors
     import manageColors

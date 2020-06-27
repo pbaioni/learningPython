@@ -26,7 +26,7 @@ print(my_list[:-5])
 # elements from 6th to end
 print(my_list[5:])
 
-# elements beginning to end
+# elements from beginning to end
 print(my_list[:])
 
 # delete one item in position 2
