@@ -1,7 +1,6 @@
 from askInput import *
 from manageFiles import readFileContent, writeFile, appendFileContent, deleteFile
 import os
-import  searchFiles
 
 #testing functions defined in personal scripts
 #change the False condition to activate a specific section
@@ -55,8 +54,3 @@ if False:
 if False:
     #testing colors
     import manageDates
-    
-if False:
-    #testing file search
-    searchFiles.searchFiles('/Users/paolobaioni/Documents/Music/Italiana/883/', '*.mp3')
-
