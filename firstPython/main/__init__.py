@@ -41,7 +41,7 @@ if False:
     #IMPORTANT: do NOT import the script if you use os.system to execute it
     os.system('python manageArguments.py 7 5')
     
-if True:
+if False:
     #testing passing variables between scripts
     variableToPass = 10
     #this executes the passVariables script
