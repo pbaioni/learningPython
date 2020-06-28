@@ -30,7 +30,7 @@ if False :
     print 'I received ', stringInput
 
 if False:
-    #testing loops
+    #testing loops and execfile call
     execfile('loops.py')
     
 if False:
@@ -38,14 +38,14 @@ if False:
     execfile('lists.py')
     
 if False:
-    #testing arguments
+    #testing arguments and os.system call
     #IMPORTANT: do NOT import the script if you use os.system to execute it
     os.system('python manageArguments.py 7 5')
     
 if False:
     #testing passing variables between scripts
     variableToPass = 10
-    #this executes the passVariables script
+    #testing script execution using 'import'
     import passVariables
     
 if False:
