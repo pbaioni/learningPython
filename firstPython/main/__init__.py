@@ -53,11 +53,11 @@ if False:
     import manageColors
     
 if False:
-    #testing colors
+    #testing dates
     import manageDates
     
 if False:
-    #testing file search
+    #testing file search by pattern
     searchFiles.searchFiles('/Users/paolobaioni/Documents/Music/Italiana/883/', '*.mp3')
     
 if False:

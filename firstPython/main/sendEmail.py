@@ -14,7 +14,7 @@ server.starttls()
 
 #the login can be successful only if the "less secure apps" option is turned on
 #you can set the option here: https://myaccount.google.com/lesssecureapps
-server.login("paolobaionitoulouse@gmail.com", "FC01jfk!")
+server.login("paolobaionitoulouse@gmail.com", "putTheRightPassword")
 
 server.sendmail("paolobaionitoulouse@gmail.com", "baioni2002@yahoo.fr", msg)
 server.close()
