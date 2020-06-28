@@ -76,7 +76,7 @@ if False:
     #testing periodic action
     import periodicTask
     
-if True:
+if False:
     #testing logging
     import logToFile
     import logToConsole
