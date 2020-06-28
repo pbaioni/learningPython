@@ -1,9 +1,20 @@
 import smtplib
-server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
 
-#Next, log in to the server
-server.login("login", "pwd")
+msg = "\r\n".join([
+  "From: paolobaionitoulouse@gmail.com",
+  "To: baioni2002@yahoo.fr",
+  "Subject: Hello from python script",
+  "",
+  "This is the text of the email: hello!"
+  ])
 
-#Send the mail
-msg = '\nHello!' 
-server.sendmail("sender@gmail.com", "target@gmail.com", msg)
+server = smtplib.SMTP('smtp.gmail.com:587')
+server.ehlo()
+server.starttls()
+
+#the login can be successful only if the "less secure apps" option is turned on
+#you can set the option here: https://myaccount.google.com/lesssecureapps
+server.login("paolobaionitoulouse@gmail.com", "FC01jfk!")
+
+server.sendmail("paolobaionitoulouse@gmail.com", "baioni2002@yahoo.fr", msg)
+server.close()
