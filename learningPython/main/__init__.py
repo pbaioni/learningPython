@@ -63,4 +63,8 @@ if False:
 if False:
     #testing email sending
     import sendEmail
+    
+if False:
+    #testing periodic action
+    import periodicTask
 
