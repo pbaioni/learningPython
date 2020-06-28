@@ -1,7 +1,15 @@
+import os
+import logging
 from askInput import *
 from manageFiles import readFileContent, writeFile, appendFileContent, deleteFile
-import os
 import  searchFiles
+
+#creating log folder if it doesn't exist
+logFolder = './log/'
+if not os.path.isdir(logFolder):
+    os.mkdir(logFolder)
+#setting root logerg configuration
+logging.basicConfig(level=logging.INFO,format='%(asctime)s (%(threadName)-10s) %(filename)s [%(levelname)s] %(message)s')
 
 #testing functions defined in personal scripts
 #change the False condition to activate a specific section
@@ -67,4 +75,10 @@ if False:
 if False:
     #testing periodic action
     import periodicTask
+    
+if False:
+    #testing console logging
+    import logToFile
+    import logToConsole
+
 
