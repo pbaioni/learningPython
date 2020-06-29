@@ -4,6 +4,7 @@ from askInput import *
 from manageFiles import readFileContent, writeFile, appendFileContent, deleteFile
 import  searchFiles
 import globalVariables
+from manageExceptions import CustomException
 
 #creating log folder if it doesn't exist
 if not os.path.isdir(globalVariables.logFolder):
@@ -80,5 +81,17 @@ if False:
     #testing logging
     import logToFile
     import logToConsole
-
-
+    
+if False:
+    #testing exceptions
+    
+    #this can raise local exception
+    import manageExceptions
+    
+    #this raises an exception to be caught here
+    try:
+        manageExceptions.raiseCustomException()
+    except CustomException as ce:
+        print('Custom Exception caught in calling script:')
+        print(ce)
+        
