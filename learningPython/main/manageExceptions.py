@@ -1,4 +1,5 @@
 from math import sqrt
+import CustomException
 
 #catch exception locally
 try:
@@ -9,10 +10,6 @@ except ValueError as ve:
     print(ve)
 else:
     print 'The square root is:', sqrt(a)
-
-#defining a nested custom exception
-class CustomException(Exception):
-        pass
 
 def raiseCustomException():
     #this exception must be handled in the calling script in order to avoid crash
