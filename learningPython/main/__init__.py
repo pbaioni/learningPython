@@ -6,9 +6,6 @@ from manageFiles import readFileContent, writeFile, appendFileContent, deleteFil
 import  searchFiles
 import CustomException
 
-#creating log folder if it doesn't exist
-if not os.path.isdir(globalVariables.logFolder):
-    os.mkdir(globalVariables.logFolder)
 #setting root logger configuration
 logging.basicConfig(level=logging.INFO,format=globalVariables.logFormatter)
 
@@ -56,7 +53,7 @@ if False :
     print 'I received ', stringInput
     
 #testing logging 
-if False:
+if True:
     import logToFile
     import logToConsole
     
