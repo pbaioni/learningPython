@@ -53,7 +53,7 @@ if False :
     print 'I received ', stringInput
     
 #testing logging 
-if True:
+if False:
     import logToFile
     import logToConsole
     
