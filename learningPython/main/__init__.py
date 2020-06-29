@@ -1,34 +1,51 @@
 import os
-import logging
 from askInput import *
+import globalVariables
+import logging
 from manageFiles import readFileContent, writeFile, appendFileContent, deleteFile
 import  searchFiles
-import globalVariables
 import CustomException
 
 #creating log folder if it doesn't exist
 if not os.path.isdir(globalVariables.logFolder):
     os.mkdir(globalVariables.logFolder)
-#setting root logerg configuration
+#setting root logger configuration
 logging.basicConfig(level=logging.INFO,format=globalVariables.logFormatter)
 
+#******************************
 #testing functions defined in personal scripts
 #change the False condition to activate a specific section
+#******************************
 
-if False :
-    #testing file functions
-    content = readFileContent('inputs/data.txt')
-    writeFile('outputs/created.txt', content)
-    appendFileContent('outputs/created.txt', 'New line appended')
-    deleteFile('fileToDelete.txt')
+#testing loops and execfile call
+if False:
+    execfile('loops.py')
 
-if False :
-    #reading string lines
-    for line in content.splitlines():
-        print 'line:', line
+#testing lists
+if False:
+    execfile('lists.py')
+    
+#testing colors
+if False:
+    import manageColors
 
+#testing dates
+if False:
+    import manageDates
+
+#testing passing variables between scripts and shared global variables
+if False:
+    variableToPass = 10
+    #script execution using 'import'
+    import passVariables
+    
+#testing arguments and os.system call 
+if False:
+    #IMPORTANT: do NOT import the script if you use os.system to execute it 
+    os.system('python manageArguments.py 7 5')
+
+#testing user interaction functions
 if False :
-    #testing user interaction functions
     floatNumber = askForFloat('enter a decimal:')
     print 'I received ', floatNumber
     
@@ -37,54 +54,14 @@ if False :
     
     stringInput = askForString('enter your name:')
     print 'I received ', stringInput
-
-if False:
-    #testing loops and execfile call
-    execfile('loops.py')
     
+#testing logging 
 if False:
-    #testing lists
-    execfile('lists.py')
-    
-if False:
-    #testing arguments and os.system call
-    #IMPORTANT: do NOT import the script if you use os.system to execute it
-    os.system('python manageArguments.py 7 5')
-    
-if False:
-    #testing passing variables between scripts
-    variableToPass = 10
-    #testing script execution using 'import'
-    import passVariables
-    
-if False:
-    #testing colors
-    import manageColors
-    
-if False:
-    #testing dates
-    import manageDates
-    
-if False:
-    #testing file search by pattern
-    searchFiles.searchFiles('/Users/paolobaioni/Documents/Music/Italiana/883/', '*.mp3')
-    
-if False:
-    #testing email sending
-    import sendEmail
-    
-if False:
-    #testing periodic action
-    import periodicTask
-    
-if False:
-    #testing logging
     import logToFile
     import logToConsole
     
-if False:
-    #testing exceptions
-    
+#testing exceptions
+if False:   
     #this can raise local exception
     import manageExceptions
     
@@ -94,8 +71,31 @@ if False:
     except CustomException as ce:
         print('Custom Exception caught in calling script:')
         print(ce)
-        
+    
+#testing file functions
+if False :
+    content = readFileContent('inputs/data.txt')
+    writeFile('outputs/created.txt', content)
+    appendFileContent('outputs/created.txt', 'New line appended')
+    deleteFile('fileToDelete.txt')
+    
+    #reading string line by line
+    for line in content.splitlines():
+        print 'line:', line
+    
+#testing file search by pattern
 if False:
-    #testing concurrent threads
+    searchFiles.searchFiles('/Users/paolobaioni/Documents/Music/Italiana/883/', '*.mp3')
+    
+#testing email sending
+if False:
+    import sendEmail
+
+#testing periodic action
+if False:
+    import periodicTask
+    
+#testing threads management  
+if False:
     import manageThreads
         
