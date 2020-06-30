@@ -1,5 +1,7 @@
 *.pyc
 .DS_Store
 /log/
+/data/
 *.log
-/mydatabase.db
+*.db
+

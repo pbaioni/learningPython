@@ -99,7 +99,7 @@ if False:
     
 #testing database
 if False:
-    connect('mydatabase.db')
+    createAndConnect('./data/mydatabase.db')
     createUserTable()
     insertUser('Paolo', 43)
     insertUser('Clemence', 37)

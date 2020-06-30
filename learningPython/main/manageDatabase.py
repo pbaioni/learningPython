@@ -1,15 +1,33 @@
 import sqlite3
+import os
+from manageFiles import createFile
 
 conn = None
 cursor = None
 
-def connect(dbName):
+def createAndConnect(dbPath):
+    try:
+        if not os.path.isfile(dbPath):
+            #creating not existing directories in database path
+            os.makedirs(os.path.dirname(dbPath))
+            #creating database file
+            createFile(dbPath)
+            print 'database', dbPath, 'created'
+        else:
+            print 'database', dbPath, 'already exists'
+        connect(dbPath)
+    except Exception as e:
+        print 'Erreur while creating database\n', e
+        conn.rollback()
+        
+def connect(dbPath):
     try:
         global conn 
-        conn = sqlite3.connect(dbName)
+        #connecting to database
+        conn = sqlite3.connect(dbPath)
         global cursor
         cursor = conn.cursor()
-        print 'database', dbName, 'connected'
+        print 'database', dbPath, 'connected'
     except Exception as e:
         print 'Erreur while connecting to database\n', e
         conn.rollback()
