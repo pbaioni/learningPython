@@ -5,6 +5,7 @@ import logging
 from manageFiles import readFileContent, writeFile, appendFileContent, deleteFile
 import  searchFiles
 import CustomException
+from manageDatabase import *
 
 #setting root logger configuration
 logging.basicConfig(level=logging.INFO,format=globalVariables.logFormatter)
@@ -95,4 +96,17 @@ if False:
 #testing threads management  
 if False:
     import manageThreads
+    
+#testing database
+if False:
+    connect('mydatabase.db')
+    createUserTable()
+    insertUser('Paolo', 43)
+    insertUser('Clemence', 37)
+    results = executeCommand("""SELECT * FROM users""")
+    for user in results:
+        print user
+    dropUserTable()
+    disconnect()
+    
         
